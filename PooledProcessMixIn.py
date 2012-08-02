@@ -7,6 +7,8 @@ of processes forked at initialization time
 each process allocate a pool of given number of threads
 
 Copyright © 2012, Muayyad Alsadi <alsadi@gmail.org>
+Released under the same terms as of Python 
+http://docs.python.org/license.html
 """
 
 import socket
