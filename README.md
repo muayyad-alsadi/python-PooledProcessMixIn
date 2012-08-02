@@ -42,11 +42,11 @@ Example
 Details
 -------
 
-You can set initial number of processes by setting self._process_n before calling self._init_pool()
+You can set initial number of processes by setting `self._process_n` before calling `self._init_pool()`
 
-You can set initial number of threads for each forked process by setting self._thread_n before calling self._init_pool()
+You can set initial number of threads for each forked process by setting self._thread_n before calling `self._init_pool()`
 
-You should call self._init_pool() AFTER super class __init__ but
+You should call `self._init_pool()` AFTER super class `__init__` but
 if you did not call it, it will be called automatically when we get first request
 
 When Benchmarked against ThreadingMixIn and ForkingMixIn, it gives double performance (was able to handle about 1,500 request per second while other mix-ins reached 800 requests/second )
