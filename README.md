@@ -1,9 +1,6 @@
 PooledProcessMixIn For Python
 =============================
-
-.. image:: http://www.python.org/images/python-logo.gif
-  :alt: Python Logo
-  :align: right
+![Python Logo](http://www.python.org/images/python-logo.gif)
 
 Fast Concurrent Pool of preforked-processes and threads Mix-in for python's socket server
 Replace the usual ThreadingMixIn and ForkingMixIn
@@ -27,7 +24,6 @@ git clone https://github.com/muayyad-alsadi/python-PooledProcessMixIn.git
 Example
 -------
 
-::
 
     from PooledProcessMixIn import PooledProcessMixIn
     from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
@@ -55,10 +51,8 @@ if you did not call it, it will be called automatically when we get first reques
 
 When Benchmarked against ThreadingMixIn and ForkingMixIn, it gives double performance (was able to handle about 1,500 request per second while other mix-ins reached 800 requests/second )
 
-::
     siege -b -c 100 -t10s localhost:8888/test
 
-::
     2012-08-02 12:51:47,  14663,       9.58,           0,       0.01,     1530.58,        0.00,       22.87,   14663,       0
     2012-08-02 12:52:44,   7653,       9.58,           0,       0.04,      798.85,        0.00,       29.42,    7653,       5
     2012-08-02 12:53:14,   7726,       9.47,           0,       0.05,      815.84,        0.00,       43.57,    7726,       0
