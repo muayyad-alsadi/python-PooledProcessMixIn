@@ -1,0 +1,4 @@
+  * clean shutdown by using the shared memory of self._keep_running
+  * clean up after CTRL+C
+
+
