@@ -1,4 +1,9 @@
   * clean shutdown by using the shared memory of self._keep_running
   * clean up after CTRL+C
+  * report each thread status: ready, busy, unresponsive
+  * spawn more processes when needed and collect them when idle
+  * implement a WSGI server or port some famous WSGI to use this one
+  * add the project to PyPI
+
 
 

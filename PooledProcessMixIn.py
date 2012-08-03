@@ -16,6 +16,9 @@ import socket
 from multiprocessing import Process, Event, Semaphore, Value, cpu_count
 from threading import Thread, currentThread
 
+__author__ = 'Muayyad Saleh Alsadi'
+__version__ = '0.0.1'
+__license__ = 'PSFL'
 
 class PooledProcessMixIn:
     """
