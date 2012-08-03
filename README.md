@@ -53,6 +53,7 @@ When Benchmarked against ThreadingMixIn and ForkingMixIn, it gives double perfor
 
     siege -b -c 100 -t10s localhost:8888/test
 
+          Date & Time,  Trans,  Elap Time,  Data Trans,  Resp Time,  Trans Rate,  Throughput,  Concurrent,    OKAY,   Failed
     2012-08-02 12:51:47,  14663,       9.58,           0,       0.01,     1530.58,        0.00,       22.87,   14663,       0
     2012-08-02 12:52:44,   7653,       9.58,           0,       0.04,      798.85,        0.00,       29.42,    7653,       5
     2012-08-02 12:53:14,   7726,       9.47,           0,       0.05,      815.84,        0.00,       43.57,    7726,       0

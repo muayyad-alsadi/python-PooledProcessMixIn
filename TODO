@@ -2,8 +2,4 @@
   * clean up after CTRL+C
   * report each thread status: ready, busy, unresponsive
   * spawn more processes when needed and collect them when idle
-  * implement a WSGI server or port some famous WSGI to use this one
-  * add the project to PyPI
-
-
 
