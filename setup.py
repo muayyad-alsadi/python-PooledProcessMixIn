@@ -10,7 +10,7 @@ import PooledProcessMixIn
 
 setup(name='PooledProcessMixIn',
       version=PooledProcessMixIn.__version__,
-      description='Fast and simple WSGI-framework for small web-applications.',
+      description='A Pool of processes and threads Mix-in for socketserver.',
       long_description=PooledProcessMixIn.__doc__,
       author=PooledProcessMixIn.__author__,
       author_email='alsadi@gmail.com',
