@@ -18,6 +18,10 @@ class MyTestHandler (BaseHTTPRequestHandler):
         self.end_headers()
         #time.sleep(0.5)
         self.wfile.write('PPID=[%d] PID=[%d] thread=[%s] uri=[%s] from [%s]' % (os.getppid(), os.getpid(), currentThread().name, self.path, self.client_address[0],))
+        if self.path=='/shutdown':
+            print "testing software shutting down."
+            self.server.shutdown()
+        
 
 class MyHTTPTest (PooledProcessMixIn, HTTPServer):
     def __init__(self):
@@ -26,5 +30,7 @@ class MyHTTPTest (PooledProcessMixIn, HTTPServer):
         print "listening on http://127.0.0.1:8888/"
 
 test=MyHTTPTest()
-test.serve_forever()
+try: test.serve_forever()
+finally: test.shutdown()
+print "Done."
 

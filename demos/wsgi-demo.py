@@ -18,4 +18,8 @@ if __name__ == '__main__':
 
     host='127.0.0.1'
     port=8080
-    make_server(host, port, application, server_class=WSGIServerPool).serve_forever()
+    server=make_server(host, port, application, server_class=WSGIServerPool)
+    try:
+        server.serve_forever()
+    finally:
+        server.shutdown()
