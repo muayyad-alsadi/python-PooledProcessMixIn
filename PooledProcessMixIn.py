@@ -19,7 +19,7 @@ from threading import Thread, currentThread
 from SocketServer import BaseServer # for shutdown
 
 __author__ = 'Muayyad Saleh Alsadi'
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 __license__ = 'PSFL'
 
 class PooledProcessMixIn:
@@ -28,7 +28,7 @@ A Mix-in added by inheritance to any Socket Server like BaseHTTPServer to provid
 A Pool of forked processes each having a pool of threads
     """
     def _handle_request_noblock(self):
-        if not hasattr(self, '_pool_initialized'): self._init_pool()
+        if not getattr(self, '_pool_initialized', False): self._init_pool()
         self._event.clear()
         self._semaphore.release()
         self._event.wait()
@@ -51,8 +51,8 @@ A Pool of forked processes each having a pool of threads
 
     def _init_pool(self):
         self._pool_initialized=True
-        if not hasattr(self, '_process_n'): self._process_n=max(2, cpu_count())
-        if not hasattr(self, '_thread_n'): self._thread_n=64
+        self._process_n=getattr(self, '_process_n', max(2, cpu_count()))
+        self._thread_n=getattr(self, '_thread_n', 64)
         self._keep_running = Value('i', 1)
         self._shutdown_event=Event()
         self._shutdown_event.clear()

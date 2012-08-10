@@ -1,4 +1,5 @@
   * report each thread status: ready, busy, unresponsive
   * spawn more processes when needed and collect them when idle
   * run pychecker and pylint before submitting to pypi
+  * programmatic shutdown
 
